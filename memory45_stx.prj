@@ -1,0 +1,2 @@
+vhdl isim_temp "../memory/dff.vhd"
+vhdl isim_temp "../memory/memory45.vhd"

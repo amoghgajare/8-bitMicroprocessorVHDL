@@ -1,0 +1,3 @@
+MODULE tbmem
+SUBMODULE memory45
+INSTANCE UUT

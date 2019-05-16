@@ -1,0 +1,205 @@
+--------------------------------------------------------------------------------
+-- Copyright (c) 1995-2007 Xilinx, Inc.
+-- All Right Reserved.
+--------------------------------------------------------------------------------
+--   ____  ____ 
+--  /   /\/   / 
+-- /___/  \  /    Vendor: Xilinx 
+-- \   \   \/     Version : 9.2i
+--  \   \         Application : ISE
+--  /   /         Filename : maintb2.ant
+-- /___/   /\     Timestamp : Thu Apr 25 22:09:16 2019
+-- \   \  /  \ 
+--  \___\/\___\ 
+--
+--Command: 
+--Design Name: maintb2
+--Device: Xilinx
+--
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.NUMERIC_STD.ALL;
+USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE STD.TEXTIO.ALL;
+
+ENTITY maintb2 IS
+END maintb2;
+
+ARCHITECTURE testbench_arch OF maintb2 IS
+    FILE RESULTS: TEXT OPEN WRITE_MODE IS "C:\Xilinx92i\DSDProject\maintb2.ano";
+
+    COMPONENT MicroprocessorControlUnitModule
+        PORT (
+            A : In std_logic_vector (7 DownTo 0);
+            B : In std_logic_vector (7 DownTo 0);
+            S : In std_logic_vector (3 DownTo 0);
+            MEMORYBUFFER : In std_logic_vector (31 DownTo 0);
+            STATUSFLAGS : Out std_logic_vector (2 DownTo 0);
+            Y : Out std_logic_vector (7 DownTo 0);
+            CorBin : In std_logic;
+            CLK : In std_logic;
+            CorBout : Out std_logic
+        );
+    END COMPONENT;
+
+    SIGNAL A : std_logic_vector (7 DownTo 0) := "00000000";
+    SIGNAL B : std_logic_vector (7 DownTo 0) := "00000000";
+    SIGNAL S : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL MEMORYBUFFER : std_logic_vector (31 DownTo 0) := "00000000000000000000000000000000";
+    SIGNAL STATUSFLAGS : std_logic_vector (2 DownTo 0) := "000";
+    SIGNAL Y : std_logic_vector (7 DownTo 0) := "00000000";
+    SIGNAL CorBin : std_logic := '0';
+    SIGNAL CLK : std_logic := '0';
+    SIGNAL CorBout : std_logic := '0';
+
+    SHARED VARIABLE TX_ERROR : INTEGER := 0;
+    SHARED VARIABLE TX_OUT : LINE;
+
+    constant PERIOD : time := 200 ns;
+    constant DUTY_CYCLE : real := 0.5;
+    constant OFFSET : time := 100 ns;
+
+    BEGIN
+        UUT : MicroprocessorControlUnitModule
+        PORT MAP (
+            A => A,
+            B => B,
+            S => S,
+            MEMORYBUFFER => MEMORYBUFFER,
+            STATUSFLAGS => STATUSFLAGS,
+            Y => Y,
+            CorBin => CorBin,
+            CLK => CLK,
+            CorBout => CorBout
+        );
+
+        PROCESS    -- clock process for CLK
+        BEGIN
+            WAIT for OFFSET;
+            CLOCK_LOOP : LOOP
+                CLK <= '0';
+                WAIT FOR (PERIOD - (PERIOD * DUTY_CYCLE));
+                CLK <= '1';
+                WAIT FOR (PERIOD * DUTY_CYCLE);
+            END LOOP CLOCK_LOOP;
+        END PROCESS;
+
+        PROCESS    -- Annotation process for CLK
+            VARIABLE TX_TIME : INTEGER := 0;
+
+            PROCEDURE ANNOTATE_STATUSFLAGS(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", STATUSFLAGS, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, STATUSFLAGS);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_Y(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", Y, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, Y);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_CorBout(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", CorBout, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, CorBout);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+        BEGIN
+            WAIT for 1 fs;
+            ANNOTATE_STATUSFLAGS(0);
+            ANNOTATE_Y(0);
+            ANNOTATE_CorBout(0);
+            WAIT for OFFSET;
+            TX_TIME := TX_TIME + 100;
+            ANNO_LOOP : LOOP
+                --Rising Edge
+                WAIT for 115 ns;
+                TX_TIME := TX_TIME + 115;
+                ANNOTATE_STATUSFLAGS(TX_TIME);
+                ANNOTATE_Y(TX_TIME);
+                ANNOTATE_CorBout(TX_TIME);
+                WAIT for 85 ns;
+                TX_TIME := TX_TIME + 85;
+            END LOOP ANNO_LOOP;
+        END PROCESS;
+
+        PROCESS
+            BEGIN
+                -- -------------  Current Time:  185ns
+                WAIT FOR 185 ns;
+                A <= "10111101";
+                -- -------------------------------------
+                -- -------------  Current Time:  385ns
+                WAIT FOR 200 ns;
+                S <= "0010";
+                -- -------------------------------------
+                -- -------------  Current Time:  585ns
+                WAIT FOR 200 ns;
+                S <= "0100";
+                -- -------------------------------------
+                -- -------------  Current Time:  785ns
+                WAIT FOR 200 ns;
+                S <= "0110";
+                -- -------------------------------------
+                -- -------------  Current Time:  985ns
+                WAIT FOR 200 ns;
+                S <= "1000";
+                -- -------------------------------------
+                -- -------------  Current Time:  1185ns
+                WAIT FOR 200 ns;
+                S <= "1010";
+                -- -------------------------------------
+                -- -------------  Current Time:  1385ns
+                WAIT FOR 200 ns;
+                S <= "1100";
+                -- -------------------------------------
+                -- -------------  Current Time:  1585ns
+                WAIT FOR 200 ns;
+                S <= "1110";
+                -- -------------------------------------
+                -- -------------  Current Time:  1785ns
+                WAIT FOR 200 ns;
+                S <= "0000";
+                -- -------------------------------------
+                WAIT FOR 6415 ns;
+
+                STD.TEXTIO.write(TX_OUT, string'("Total[]"));
+                STD.TEXTIO.writeline(RESULTS, TX_OUT);
+                ASSERT (FALSE) REPORT
+                    "Success! Simulation for annotation completed"
+                    SEVERITY FAILURE;
+            END PROCESS;
+
+    END testbench_arch;
+

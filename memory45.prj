@@ -1,0 +1,2 @@
+vhdl work "../memory/dff.vhd"
+vhdl work "../memory/memory45.vhd"

@@ -1,0 +1,3 @@
+MODULE maintb
+SUBMODULE MicroprocessorControlUnitModule
+INSTANCE UUT

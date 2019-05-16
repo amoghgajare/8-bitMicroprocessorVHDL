@@ -1,0 +1,3 @@
+MODULE test3
+SUBMODULE subtractor
+INSTANCE UUT

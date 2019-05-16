@@ -1,0 +1,1 @@
+xst -ise "C:/Xilinx92i/DSDProject/DSDProject.ise" -intstyle ise -ifn adder.xst -ofn adder.syr

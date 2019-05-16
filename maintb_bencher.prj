@@ -1,0 +1,8 @@
+vhdl work "singlefullsubtractor.vhd"
+vhdl work "singlefulladder.vhd"
+vhdl work "subtractor.vhd"
+vhdl work "adder.vhd"
+vhdl work "ORoperation.vhd"
+vhdl work "NOTOperation.vhd"
+vhdl work "ANDOperation.vhd"
+vhdl work "MicroprocessorControlUnitModule.vhd"

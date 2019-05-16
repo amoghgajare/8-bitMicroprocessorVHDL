@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="819" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/Xilinx92i/DSDProject/MicroprocessorControlUnitModule.vhd</arg>&quot; line <arg fmt="%d" index="2">80</arg>: The following signals are missing in the process sensitivity list:
+<arg fmt="%s" index="3">A, B</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">t_memPr</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">t_memOut</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">t_memClr</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="unknown" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">CorBout</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="unknown" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="unknown" >Hierarchical block &lt;<arg fmt="%s" index="1">G7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/BF0/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/BF1/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/BF2/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/BF3/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/BF4/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/BF5/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/BF6/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/BF7/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/A0/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/A1/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/A2/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/A3/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/A4/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/A5/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/A6/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/A7/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/B0/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/B1/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/B2/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/B3/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/B4/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/B5/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/B6/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/B7/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/C0/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/C1/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/C2/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/C3/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/C4/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/C5/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/C6/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">G7/C7/out1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">MicroprocessorControlUnitModule</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="unknown" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

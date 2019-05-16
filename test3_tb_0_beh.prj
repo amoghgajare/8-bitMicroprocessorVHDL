@@ -1,0 +1,3 @@
+vhdl work "singlefullsubtractor.vhd"
+vhdl work "subtractor.vhd"
+vhdl work "test3_tb_0.vhd"

@@ -1,0 +1,8 @@
+vhdl isim_temp "singlefullsubtractor.vhd"
+vhdl isim_temp "singlefulladder.vhd"
+vhdl isim_temp "subtractor.vhd"
+vhdl isim_temp "adder.vhd"
+vhdl isim_temp "ORoperation.vhd"
+vhdl isim_temp "NOTOperation.vhd"
+vhdl isim_temp "ANDOperation.vhd"
+vhdl isim_temp "MicroprocessorControlUnitModule.vhd"
